@@ -1,3 +1,10 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def landingPage_view(request):
+    return render(request, "landingpage.html")
+    
+def detailsPage_view(request):
+    link = request.POST.get("link")
+    return render(request, 'details.html')

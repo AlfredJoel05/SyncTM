@@ -1,10 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animate Test</title>
-    <link rel="stylesheet" type="text/css" href="details.css">
+    <!-- <link rel="stylesheet" href="{% static 'css/details.css' %}"> -->
+    <link rel="stylesheet" href="../static/css/details.css"
 </head>
 <body>
     <div class='spinner-wrapper'>
@@ -24,19 +26,19 @@
                 <div class="results">
                     <div class="positive">
                         <h6>Positive 95.4%</h6>
-                        <img src = "like.svg" id="pimage">
+                        <img src = "../static/css/like.svg" id="pimage">
                         <h3>This product has 95.4% of positive feedbacks
                         based on real user reviews.</h3>
                     </div>
                     <div class="negative">
                         <h6>Negative 5.76%</h6>
-                        <img src = "dislike.svg" id="nimage">
+                        <img src = "../static/css/dislike.svg" id="nimage">
                         <h3>This product has 5.76% of negative feedbacks
                             based on real user reviews.</h3>
                     </div>
                     <div class="neutral">
                         <h6>Neutral 2.3%</h6>
-                        <img src = "neutral.svg" id="neuimage">
+                        <img src = "../static/css/neutral.svg" id="neuimage">
                         <h3>This product has 2.3% of neutral feedbacks
                             based on real user reviews.</h3>
                     </div>

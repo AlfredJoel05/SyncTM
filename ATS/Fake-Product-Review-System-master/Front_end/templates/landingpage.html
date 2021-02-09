@@ -1,35 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animate Test</title>
-    <link rel="stylesheet" type="text/css" href="grad.css">
+    <title>Fake Product Analyzer</title>
+    <link rel="stylesheet" href="{% static 'css/grad.css' %}">
+    <!-- <link rel="stylesheet" href="../static/css/grad.css"> -->
 </head>
 <body>
     <div class="gradientbody">
         <h5>Designed by Aishwarya, Arun Kumar and Alfred Joel</h5>
         <div class="pagebox">
             <h1>Fake Product Review System</h1>
-            <p>
-                <span class="input">
-                    <input type="text" placeholder="Paste the link">
-                    <span></span>	
-                </span>
-            </p>
-            <ul>
-                <li>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span>
-                        <a style="text-decoration: none;" href="./details.html">
-                        <h4>Analyze</h4>
-                        </a>
+            <form action="details" method="POST">{% csrf_token %} 
+                <p>
+                    <span class="input">
+                            <input type="text" placeholder="Paste the link" name="link" id="link">
+                        <span></span>	
                     </span>
-                  </li>
-            </ul>
+                </p>
+                <ul>
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>
+                            <a style="text-decoration: none;" href="{% url 'detailspage'%}">    
+                                <button>
+                                    <h4>Analyze</h4>
+                                </button>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </form>
         </div>
     </div>
 </body>
