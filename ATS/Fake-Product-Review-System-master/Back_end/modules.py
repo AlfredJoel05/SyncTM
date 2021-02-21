@@ -5,8 +5,10 @@ dic={}
 def jprint(obj):
     #print(len(obj))
     for i in range(len(obj)):
-        percentage=obj[i]['classifications'];percentage=percentage[0]['confidence']
-        comment=obj[i]['classifications'];comment=comment[0]['tag_name']
+        percentage=obj[i]['classifications'];
+        percentage=percentage[0]['confidence']
+        comment=obj[i]['classifications'];
+            comment=comment[0]['tag_name']
         print("Results show that the product is {} % {}".format(percentage*100,comment))
         if comment not in dic.keys():
             dic[comment]=[percentage*100]
